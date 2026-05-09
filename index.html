@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">Claus Code Manager — Native macOS App</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="A native macOS app to manage your Claude Code sessions, projects, context usage, and subscription quota.">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon-256.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================== -->
+  <!-- Top-Bar                                        -->
+  <!-- ============================================== -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top" class="brand">
+        <img src="assets/favicon.png" alt="" class="brand-icon" width="32" height="32">
+        <span class="brand-name">Claus Code Manager</span>
+      </a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#download" data-i18n="nav.download">Download</a>
+        <a href="#imprint" data-i18n="nav.imprint">Imprint</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+        <span aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============================================ -->
+    <!-- Hero                                         -->
+    <!-- ============================================ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="eyebrow" data-i18n="hero.eyebrow">Native macOS App</span>
+          <h1 data-i18n="hero.title">Manage your Claude Code sessions natively on macOS.</h1>
+          <p class="lead" data-i18n="hero.subtitle">Browse projects, track context usage, monitor your subscription quota and resume sessions — all from a single SwiftUI app, without ever leaving your Mac.</p>
+          <div class="cta-row">
+            <!-- TODO: Apple-signiertes .dmg/.zip-URL hier einsetzen -->
+            <a href="#download" class="btn btn-primary" data-i18n="hero.cta.primary">Download for macOS</a>
+          </div>
+          <p class="meta-line">
+            <span data-i18n="hero.requirements">Requires macOS 26.4 or later</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <span data-i18n="hero.signed">Signed &amp; notarized by Apple</span>
+          </p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <img src="assets/icon-512.png" alt="" width="320" height="320">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- Features                                     -->
+    <!-- ============================================ -->
+    <section id="features" class="features">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="features.title">Everything you need, in one place</h2>
+          <p data-i18n="features.subtitle">Claus Code Manager reads your local <code>~/.claude/</code> data and presents it in a clean, native interface — no analytics, no tracking, your session data never leaves your Mac.</p>
+        </header>
+
+        <ul class="feature-grid">
+
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📂</div>
+            <h3 data-i18n="features.sessions.title">Session Overview</h3>
+            <p data-i18n="features.sessions.body">All your projects with slug, branch, size and last access time — sortable, searchable, with project aliases that override the folder name.</p>
+          </li>
+
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📊</div>
+            <h3 data-i18n="features.context.title">Live Context Usage</h3>
+            <p data-i18n="features.context.body">Per-session token usage as a progress bar with auto-detected scale (200K or 1M). Reads the latest assistant turn directly from the JSONL tail.</p>
+          </li>
+
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🟢</div>
+            <h3 data-i18n="features.live.title">Running-Session Indicator</h3>
+            <p data-i18n="features.live.body">Active <code>claude</code> processes are detected via FSEvents in sub-second latency and shown as a pulsing icon in the sidebar and a badge in the detail header.</p>
+          </li>
+
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📈</div>
+            <h3 data-i18n="features.quota.title">Subscription Quota</h3>
+            <p data-i18n="features.quota.body">Live 5-hour, weekly and monthly subscription windows with auto-refresh, smart back-off on rate limits and persistent caching across launches.</p>
+          </li>
+
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">⬆️</div>
+            <h3 data-i18n="features.update.title">Version &amp; Update Management</h3>
+            <p data-i18n="features.update.body">Detects whether <code>claude</code> was installed via Homebrew Cask, Formula, npm or natively — and updates it from a live-log sheet, optionally restoring all running sessions afterwards.</p>
+          </li>
+
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🗂️</div>
+            <h3 data-i18n="features.tabs.title">Memories, Files, Subagents, Todos</h3>
+            <p data-i18n="features.tabs.body">Four dedicated tabs per project show your memory files, Claude config files, delegated subagent runs (with final reports) and todo lists.</p>
+          </li>
+
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🛠️</div>
+            <h3 data-i18n="features.move.title">Project Management</h3>
+            <p data-i18n="features.move.body">Aliases, full project moves with automatic backup and JSONL <code>cwd</code>-patching, optional auto-purge of orphaned projects.</p>
+          </li>
+
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">⚙️</div>
+            <h3 data-i18n="features.global.title">Global Configuration</h3>
+            <p data-i18n="features.global.body">CLAUDE.md, settings, keybindings, statusline, skills, agents, plugins from <code>~/.claude/</code> in one place — credentials are never displayed.</p>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- Download                                     -->
+    <!-- ============================================ -->
+    <section id="download" class="download">
+      <div class="container download-inner">
+        <h2 data-i18n="download.title">Download for macOS</h2>
+        <p class="lead" data-i18n="download.subtitle">A single, signed and notarized binary. No installer, no background service.</p>
+
+        <!-- TODO: Apple-signiertes .dmg/.zip-URL hier einsetzen -->
+        <a href="#TODO-DOWNLOAD-URL" class="btn btn-primary btn-large">
+          <span data-i18n="download.button">Download Claus Code Manager</span>
+        </a>
+
+        <ul class="download-meta">
+          <li>
+            <span class="label" data-i18n="download.meta.version">Version</span>
+            <span class="value">Beta</span>
+          </li>
+          <li>
+            <span class="label" data-i18n="download.meta.size">Size</span>
+            <!-- TODO: Größenangabe beim Release ersetzen -->
+            <span class="value">~5 MB</span>
+          </li>
+          <li>
+            <span class="label" data-i18n="download.meta.requirements">Requires</span>
+            <span class="value">macOS 26.4+</span>
+          </li>
+        </ul>
+
+        <p class="trust-note" data-i18n="download.trust">Signed with an Apple Developer ID and notarized by Apple — Gatekeeper opens it without warnings.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================== -->
+  <!-- Footer                                         -->
+  <!-- ============================================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="copy">© <span id="year">2026</span> NanoApes, Torben Daniel Erz</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#imprint" data-i18n="nav.imprint">Imprint</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- Imprint / Impressum                            -->
+  <!-- ============================================== -->
+  <section id="imprint" class="imprint">
+    <div class="container">
+      <h2 data-i18n="imprint.title">Imprint</h2>
+      <p class="muted" data-i18n="imprint.intro">Information pursuant to § 5 DDG (German Digital Services Act).</p>
+
+      <dl class="imprint-list">
+        <dt data-i18n="imprint.field.name">Name</dt>
+        <dd>Torben Daniel Erz</dd>
+
+        <dt data-i18n="imprint.field.address">Address</dt>
+        <dd>
+          Menzelstraße 8<br>
+          41564 Kaarst<br>
+          Germany
+        </dd>
+
+        <dt data-i18n="imprint.field.contact">Contact</dt>
+        <dd>
+          <span data-i18n="imprint.field.email">E-mail</span>: <a href="mailto:torben.erz@nanoapes.com">torben.erz@nanoapes.com</a>
+        </dd>
+
+        <dt data-i18n="imprint.field.responsible">Responsible for content (§ 18 (2) MStV)</dt>
+        <dd>
+          Torben Daniel Erz<br>
+          Menzelstraße 8, 41564 Kaarst, Germany
+        </dd>
+      </dl>
+
+      <details class="disclaimer">
+        <summary data-i18n="imprint.disclaimer.summary">Disclaimer</summary>
+        <h3 data-i18n="imprint.disclaimer.contentTitle">Liability for content</h3>
+        <p data-i18n="imprint.disclaimer.contentBody">As a service provider we are responsible for our own content on these pages according to general legislation pursuant to § 7 (1) DDG. According to §§ 8 to 10 DDG, however, we are not obliged as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under general legislation remain unaffected.</p>
+
+        <h3 data-i18n="imprint.disclaimer.linksTitle">Liability for links</h3>
+        <p data-i18n="imprint.disclaimer.linksBody">Our offer contains links to external third-party websites whose content we have no influence on. Therefore, we cannot assume any liability for this third-party content. The respective provider or operator of the linked pages is always responsible for their content.</p>
+
+        <h3 data-i18n="imprint.disclaimer.copyrightTitle">Copyright</h3>
+        <p data-i18n="imprint.disclaimer.copyrightBody">The content and works on these pages created by the site operator are subject to German copyright law. Duplication, processing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator.</p>
+      </details>
+
+      <p class="back-to-top"><a href="#top" data-i18n="imprint.backToTop">↑ Back to top</a></p>
+    </div>
+  </section>
+
+  <script src="i18n.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
