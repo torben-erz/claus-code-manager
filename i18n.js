@@ -75,7 +75,10 @@ const translations = {
     "imprint.disclaimer.linksBody": "Our offer contains links to external third-party websites whose content we have no influence on. Therefore, we cannot assume any liability for this third-party content. The respective provider or operator of the linked pages is always responsible for their content.",
     "imprint.disclaimer.copyrightTitle": "Copyright",
     "imprint.disclaimer.copyrightBody": "The content and works on these pages created by the site operator are subject to German copyright law. Duplication, processing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator.",
-    "imprint.backToTop": "↑ Back to top"
+    "imprint.backToTop": "↑ Back to top",
+
+    "trademark.title": "Trademark notice",
+    "trademark.body": "\"Claude\" and \"Claude Code\" are trademarks of Anthropic, PBC. This app is an independent project and is not affiliated with, endorsed by, or sponsored by Anthropic."
   },
 
   de: {
@@ -142,7 +145,10 @@ const translations = {
     "imprint.disclaimer.linksBody": "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
     "imprint.disclaimer.copyrightTitle": "Urheberrecht",
     "imprint.disclaimer.copyrightBody": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
-    "imprint.backToTop": "↑ Nach oben"
+    "imprint.backToTop": "↑ Nach oben",
+
+    "trademark.title": "Markenrechtlicher Hinweis",
+    "trademark.body": "„Claude\" und „Claude Code\" sind Marken von Anthropic, PBC. Diese App ist ein unabhängiges Projekt und steht in keiner Verbindung zu Anthropic — weder durch Sponsoring, Kooperation noch Empfehlung."
   }
 };
 

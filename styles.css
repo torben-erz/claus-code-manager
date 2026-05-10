@@ -537,6 +537,29 @@ code {
   line-height: 1.6;
 }
 
+.trademark-notice {
+  margin: 48px auto 0;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-md);
+  background: var(--bg-elev);
+  text-align: left;
+}
+
+.trademark-notice h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.trademark-notice p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
 .back-to-top {
   font-size: 14px;
   margin: 0;
